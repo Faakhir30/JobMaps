@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" style="border-radius:50%;clip:50% 50% 50% 50%;" type="image/x-icon" href="{% static 'JobMap/favicon.jpg' %}">
+    <title>Welcome to JobMaps!</title>
+    <script defer src="{% static 'JobMap/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'JobMap/a.css' %}">
+  </head>
+  <body>
+    <div class="loading-screen">
+      <p class='logo'>J⨀bMaps</p>
+      <div class="loading-bar"></div>
+    </div>
+
+
+    <div class="mainFlex">
+        <div  class="Navbar">
+          <div class="logo">J⨀bMaps</div><hr>
+          <div class="Stat">
+              <li class="Stat-item">
+                  <div class="circle job">
+                    <div class="circle-fill job"></div>
+                    <div class="circle-value job">0</div>
+                  </div>
+                  <div class="info">Jobs</div>
+              </li>  
+              <li class="Stat-item">
+                <div class="circle firms">
+                  <div class="circle-fill firms"></div>
+                  <div class="circle-value firms">0</div>
+                </div>
+              <div class="info">Firms</div>
+            
+              </li>
+              <li class="Stat-item">
+                <div class="circle cities">
+                  <div class="circle-fill cities"></div>
+                  <div class="circle-value cities">0</div>
+                </div>
+              <div class="info">Cities</div>
+              </li>
+          </ul>
+        </div>
+          <hr>
+          <div style="color:lightgrey;" id="title"></div>
+          <div id="company" style="color:lightgrey;"></div>
+          <div id="location" style="color:lightgrey;"></div><hr>
+          <div id="discription" style="color:lightgrey;"></div><hr>
+          <div id="linkedIN" style="color:lightgrey;"></div>
+
+        </div>
+        <div class="map">{% include 'JobMap/map.html' %}</div>  
+        
+      
+      </div>
+  </body>
+</html>

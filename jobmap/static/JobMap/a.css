@@ -1,0 +1,231 @@
+:root { 
+  font-size: 16px;
+  font-family: 'Open Sans';
+  color: #ffffff  ;
+  --bg-six:#3a3939;
+  --bg-one: #ffffff;
+  --bg-three: rgb(255 252 252);
+  --transition-speed: 600ms;
+}
+*{
+  list-style-type: none;
+}
+.mainFlex{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden !important;  
+}
+.Navbar{
+  width: 30%;
+  margin-bottom: 0;
+  border-radius: 0 15px 15px 0;
+  background-color:var(--bg-six);
+  box-shadow: 7px 0px 20px 20px, inset 0px 0px 10px 0px gold;
+  display: flex;
+  flex-direction: column;        
+  padding-left: 0%;
+  align-items: center;
+  justify-content: start;
+  list-style-type: none;
+  max-height: 100vh;
+  overflow: hidden;
+}
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: gold;
+  text-emphasis-color: red;
+  font-size: 2rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+.map{
+  height:100vh;width: 100%;
+
+}
+.leaflet-control-attribution.leaflet-control{
+  display: none;
+}
+hr{
+  width: 87%;
+  height: 1px;
+  margin: 7%;
+  border: none;
+  background-color: gold;
+  margin-bottom: 20px;
+  align-self: center;
+}
+.Stat{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.Stat-item{
+display: flex;
+flex-direction: column;
+margin-left: 5%;
+color: gold;
+font-size: large;
+}
+.circle{
+height: 60px;
+display: grid;
+box-shadow: 0px 0px 22px black;
+width: 60px;
+color: gold;
+border: 6px solid gold;
+border-radius: 50%;
+justify-items: center;
+align-content: center;
+font-family: Lobster;
+font-size: xx-large;
+font-stretch: ultra-expanded;
+padding: inherit;
+margin-right: 5%;
+position: relative;
+}
+.circle-fill {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+border-radius: 50%;
+background-color: #e1cc5a;
+}
+.circle-value {
+position: inherit;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--bg-three);
+}
+.info{
+align-self: center;
+}
+#discription{
+  overflow: auto;
+  margin-right: 5%;
+}
+#discription::-webkit-scrollbar {
+  width: 5px; /* set the width of the scrollbar */
+  background-color: var(--bg-six); /* set the background color of the scrollbar */
+}
+
+#discription::-webkit-scrollbar-thumb {
+  background-color: #888; /* set the color of the scrollbar thumb */
+  border-radius: 10px; /* round the edges of the scrollbar thumb */
+}
+
+#discription::-webkit-scrollbar-thumb:hover {
+  background-color: #7c6060; /* set the color of the scrollbar thumb on hover */
+}
+#applyBtn{
+  padding: 30%;
+  color: white;
+  background-color: gold;
+  border-radius: 10%;
+  box-shadow: 0px 0px 17px 3px goldenrod;
+}
+@media only screen and (max-width: 950px) {
+  .mainFlex{
+    flex-direction: column;
+  }
+  .map{
+    height: 70vh;width: 100vw;
+  }
+  #discription{
+    max-height: 10%;
+  }
+  .Navbar{
+    width: 100%;
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    overflow: hidden;
+  }
+  .circle{
+    margin-right: 0;
+    margin-bottom: 2%;
+  }
+  hr{
+    margin-top: 0;
+    margin-bottom: 2%;
+  }
+  .Stat{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .Stat-item{
+    margin-left: 0;
+    margin-bottom: 2%;
+    text-align: center;
+  }
+  #discription{
+    margin-right: 0;
+    margin-bottom: 2%;
+  }
+
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1e21;
+  z-index: 999;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 5px;
+  background-color: #d1d1d1;
+  position: relative;
+}
+
+.loading-bar::before {
+  content: "";
+  width: 0%;
+  height: 5px;
+  background-color: #f0a500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: progress 2s linear infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #d1d1d1;
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4a5eba4e31e5518f6e0adee3164a2a62 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4a5eba4e31e5518f6e0adee3164a2a62" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4a5eba4e31e5518f6e0adee3164a2a62 = L.map(
+                "map_4a5eba4e31e5518f6e0adee3164a2a62",
+                {
+                    center: [32.871172, 70.954883],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5.3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_921680b08171e608e4386fae74e40795 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 4, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4a5eba4e31e5518f6e0adee3164a2a62);
+        
+    
+            var marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d = L.markerClusterGroup(
+                {}
+            );
+            map_4a5eba4e31e5518f6e0adee3164a2a62.addLayer(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var marker_6979e8af6e2ba90e1640b263cd763aa9 = L.marker(
+                [24.939612685325287, 67.04743852642092],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_9411cdf6b353ad9cc25782864d53b874 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6979e8af6e2ba90e1640b263cd763aa9.setIcon(icon_9411cdf6b353ad9cc25782864d53b874);
+        
+    
+        var popup_229755a507bd87f61069badb7289286b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10f200c458068ad39d548bd5cdbbf0c4 = $(`<div id="html_10f200c458068ad39d548bd5cdbbf0c4" style="width: 100.0%; height: 100.0%;"><div id="jobID-198" onClick="discription(198);">         JUNIOR SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_229755a507bd87f61069badb7289286b.setContent(html_10f200c458068ad39d548bd5cdbbf0c4);
+            
+        
+
+        marker_6979e8af6e2ba90e1640b263cd763aa9.bindPopup(popup_229755a507bd87f61069badb7289286b)
+        ;
+
+        
+    
+    
+            var marker_169620088562555dc9cf3dbae611e7b3 = L.marker(
+                [33.702714736018876, 73.08378607420126],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_52983c97cdf2dca4d6847503ef258672 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_169620088562555dc9cf3dbae611e7b3.setIcon(icon_52983c97cdf2dca4d6847503ef258672);
+        
+    
+        var popup_afb210c8217738f44b64e0a519863b4b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30bf35fefa215d2a149ac802a0f6631f = $(`<div id="html_30bf35fefa215d2a149ac802a0f6631f" style="width: 100.0%; height: 100.0%;"><div id="jobID-199" onClick="discription(199);">         TRAINEE SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_afb210c8217738f44b64e0a519863b4b.setContent(html_30bf35fefa215d2a149ac802a0f6631f);
+            
+        
+
+        marker_169620088562555dc9cf3dbae611e7b3.bindPopup(popup_afb210c8217738f44b64e0a519863b4b)
+        ;
+
+        
+    
+    
+            var marker_c54dc079d0fd5b5fd7ded28aa3021637 = L.marker(
+                [24.94292585262488, 67.04883143167068],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_1c69b74eedc18c4044f3731dc610ca19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c54dc079d0fd5b5fd7ded28aa3021637.setIcon(icon_1c69b74eedc18c4044f3731dc610ca19);
+        
+    
+        var popup_c2e3137c215f93315eb22fd07f8adf7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_012a2cd3955946a97599d0c85a5342aa = $(`<div id="html_012a2cd3955946a97599d0c85a5342aa" style="width: 100.0%; height: 100.0%;"><div id="jobID-200" onClick="discription(200);">         FRONT-END WEB DEVELOPER click for more details         </div></div>`)[0];
+                popup_c2e3137c215f93315eb22fd07f8adf7e.setContent(html_012a2cd3955946a97599d0c85a5342aa);
+            
+        
+
+        marker_c54dc079d0fd5b5fd7ded28aa3021637.bindPopup(popup_c2e3137c215f93315eb22fd07f8adf7e)
+        ;
+
+        
+    
+    
+            var marker_a79e2aa903b719b621c7a10017d66042 = L.marker(
+                [24.9506166600601, 67.04689496026812],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_d9adf42abaf8ed303e723bbe37dd6aaf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a79e2aa903b719b621c7a10017d66042.setIcon(icon_d9adf42abaf8ed303e723bbe37dd6aaf);
+        
+    
+        var popup_1975ce15bf66aef395d2bc1335eca42d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4406048fc0a4b52c382eedd08cc943c6 = $(`<div id="html_4406048fc0a4b52c382eedd08cc943c6" style="width: 100.0%; height: 100.0%;"><div id="jobID-201" onClick="discription(201);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_1975ce15bf66aef395d2bc1335eca42d.setContent(html_4406048fc0a4b52c382eedd08cc943c6);
+            
+        
+
+        marker_a79e2aa903b719b621c7a10017d66042.bindPopup(popup_1975ce15bf66aef395d2bc1335eca42d)
+        ;
+
+        
+    
+    
+            var marker_ff93146025c38a432025eb26b62dfe03 = L.marker(
+                [31.541396612521076, 74.31058086746712],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_8de8269b06403d6fc7da6382068cfb8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ff93146025c38a432025eb26b62dfe03.setIcon(icon_8de8269b06403d6fc7da6382068cfb8a);
+        
+    
+        var popup_af91a2a3799dec3433bdb6bad0543f69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a62ab70dab853b712c91c7ccb36a8836 = $(`<div id="html_a62ab70dab853b712c91c7ccb36a8836" style="width: 100.0%; height: 100.0%;"><div id="jobID-202" onClick="discription(202);">         JUNIOR SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_af91a2a3799dec3433bdb6bad0543f69.setContent(html_a62ab70dab853b712c91c7ccb36a8836);
+            
+        
+
+        marker_ff93146025c38a432025eb26b62dfe03.bindPopup(popup_af91a2a3799dec3433bdb6bad0543f69)
+        ;
+
+        
+    
+    
+            var marker_38a542c2a570b12cccc1a631c22b63cc = L.marker(
+                [24.94355935894685, 67.05396978502897],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_946e5efbdb4c4a7894a0de1d6d867d9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_38a542c2a570b12cccc1a631c22b63cc.setIcon(icon_946e5efbdb4c4a7894a0de1d6d867d9b);
+        
+    
+        var popup_91b0d44ea855760939193af5df7a992a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e5b00d7f456655c3afef23c945547d6 = $(`<div id="html_3e5b00d7f456655c3afef23c945547d6" style="width: 100.0%; height: 100.0%;"><div id="jobID-203" onClick="discription(203);">         TRAINEE SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_91b0d44ea855760939193af5df7a992a.setContent(html_3e5b00d7f456655c3afef23c945547d6);
+            
+        
+
+        marker_38a542c2a570b12cccc1a631c22b63cc.bindPopup(popup_91b0d44ea855760939193af5df7a992a)
+        ;
+
+        
+    
+    
+            var marker_468e124a411ac1075401c74f3e5fb052 = L.marker(
+                [24.95037965861654, 67.0560941662684],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_a6c967b750d158510d777950b9406cb6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_468e124a411ac1075401c74f3e5fb052.setIcon(icon_a6c967b750d158510d777950b9406cb6);
+        
+    
+        var popup_5bc75bfae3a60f16fc192457db982b1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5de9b1d719e7ed561dbe1d00bb79151d = $(`<div id="html_5de9b1d719e7ed561dbe1d00bb79151d" style="width: 100.0%; height: 100.0%;"><div id="jobID-204" onClick="discription(204);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_5bc75bfae3a60f16fc192457db982b1d.setContent(html_5de9b1d719e7ed561dbe1d00bb79151d);
+            
+        
+
+        marker_468e124a411ac1075401c74f3e5fb052.bindPopup(popup_5bc75bfae3a60f16fc192457db982b1d)
+        ;
+
+        
+    
+    
+            var marker_07f9f362c3084ba644990da2b34a767f = L.marker(
+                [24.952171952247937, 67.04789007154749],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_4337ac603e86355dc8ff12f279a67466 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_07f9f362c3084ba644990da2b34a767f.setIcon(icon_4337ac603e86355dc8ff12f279a67466);
+        
+    
+        var popup_1ca333ce4c2174edbb89beba0c0495d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e32f76293ba6747e2271c041a4c66478 = $(`<div id="html_e32f76293ba6747e2271c041a4c66478" style="width: 100.0%; height: 100.0%;"><div id="jobID-205" onClick="discription(205);">         JUNIOR SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_1ca333ce4c2174edbb89beba0c0495d3.setContent(html_e32f76293ba6747e2271c041a4c66478);
+            
+        
+
+        marker_07f9f362c3084ba644990da2b34a767f.bindPopup(popup_1ca333ce4c2174edbb89beba0c0495d3)
+        ;
+
+        
+    
+    
+            var marker_424abcfdb4270b90cb08872b0e249b8a = L.marker(
+                [31.544509880425153, 74.31431405918057],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_af76152f68df8fb69176478e1dd3fa1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_424abcfdb4270b90cb08872b0e249b8a.setIcon(icon_af76152f68df8fb69176478e1dd3fa1b);
+        
+    
+        var popup_e79979bcb09888d5ec8618a0ac521885 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd273415fa6eb160db694058f1ac85b7 = $(`<div id="html_bd273415fa6eb160db694058f1ac85b7" style="width: 100.0%; height: 100.0%;"><div id="jobID-206" onClick="discription(206);">         JUNIOR SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_e79979bcb09888d5ec8618a0ac521885.setContent(html_bd273415fa6eb160db694058f1ac85b7);
+            
+        
+
+        marker_424abcfdb4270b90cb08872b0e249b8a.bindPopup(popup_e79979bcb09888d5ec8618a0ac521885)
+        ;
+
+        
+    
+    
+            var marker_3ed9842929d96a33a0b7491bcf97dac6 = L.marker(
+                [31.540757493446826, 74.31523567995848],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_0d3cfa3b050a096acbac881664b2d451 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3ed9842929d96a33a0b7491bcf97dac6.setIcon(icon_0d3cfa3b050a096acbac881664b2d451);
+        
+    
+        var popup_c88729b4548f7475d52faa52f560aafa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_afdcfb23f371bfff85afaefc63b106e6 = $(`<div id="html_afdcfb23f371bfff85afaefc63b106e6" style="width: 100.0%; height: 100.0%;"><div id="jobID-207" onClick="discription(207);">         JUNIOR SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_c88729b4548f7475d52faa52f560aafa.setContent(html_afdcfb23f371bfff85afaefc63b106e6);
+            
+        
+
+        marker_3ed9842929d96a33a0b7491bcf97dac6.bindPopup(popup_c88729b4548f7475d52faa52f560aafa)
+        ;
+
+        
+    
+    
+            var marker_12728d35e3b329f3b619fefd17563a86 = L.marker(
+                [24.95428148284388, 67.0604080353992],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_7a7116ebdfc5f1ba45538c5cdb935769 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_12728d35e3b329f3b619fefd17563a86.setIcon(icon_7a7116ebdfc5f1ba45538c5cdb935769);
+        
+    
+        var popup_9b1754e306b7ea9a55c33320c312f312 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f2c4feabb1f8e6f3a3b146397270c289 = $(`<div id="html_f2c4feabb1f8e6f3a3b146397270c289" style="width: 100.0%; height: 100.0%;"><div id="jobID-208" onClick="discription(208);">         TECH TRAINEE click for more details         </div></div>`)[0];
+                popup_9b1754e306b7ea9a55c33320c312f312.setContent(html_f2c4feabb1f8e6f3a3b146397270c289);
+            
+        
+
+        marker_12728d35e3b329f3b619fefd17563a86.bindPopup(popup_9b1754e306b7ea9a55c33320c312f312)
+        ;
+
+        
+    
+    
+            var marker_f6e07a0ea1c88ab83da8f81705a94913 = L.marker(
+                [31.544512771249927, 74.32435492532824],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_41b72caf001f43692ac7eb093f68b0f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f6e07a0ea1c88ab83da8f81705a94913.setIcon(icon_41b72caf001f43692ac7eb093f68b0f0);
+        
+    
+        var popup_1ad1b740dff95f10574d6b5b21445198 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9957a3be54da761f1e07413efad0eb6f = $(`<div id="html_9957a3be54da761f1e07413efad0eb6f" style="width: 100.0%; height: 100.0%;"><div id="jobID-209" onClick="discription(209);">         TRAINEE SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_1ad1b740dff95f10574d6b5b21445198.setContent(html_9957a3be54da761f1e07413efad0eb6f);
+            
+        
+
+        marker_f6e07a0ea1c88ab83da8f81705a94913.bindPopup(popup_1ad1b740dff95f10574d6b5b21445198)
+        ;
+
+        
+    
+    
+            var marker_1603103d0054bd21e2f932d11c2f3d6f = L.marker(
+                [33.71609411985039, 73.0949878168746],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_c521dfdc5dd081fa47f2d0e9ace9c189 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1603103d0054bd21e2f932d11c2f3d6f.setIcon(icon_c521dfdc5dd081fa47f2d0e9ace9c189);
+        
+    
+        var popup_f750c0b5fafca21c91d1352ddf4f16dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88c39f4595202168a06920e37a5c8e95 = $(`<div id="html_88c39f4595202168a06920e37a5c8e95" style="width: 100.0%; height: 100.0%;"><div id="jobID-210" onClick="discription(210);">         TRAINEE SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_f750c0b5fafca21c91d1352ddf4f16dd.setContent(html_88c39f4595202168a06920e37a5c8e95);
+            
+        
+
+        marker_1603103d0054bd21e2f932d11c2f3d6f.bindPopup(popup_f750c0b5fafca21c91d1352ddf4f16dd)
+        ;
+
+        
+    
+    
+            var marker_5f75be4159f809101863f4f8a0f3b99b = L.marker(
+                [24.95635556249438, 67.05617778739722],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_bc55f1abeaf64216b7d46a2a05938062 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5f75be4159f809101863f4f8a0f3b99b.setIcon(icon_bc55f1abeaf64216b7d46a2a05938062);
+        
+    
+        var popup_9713da5333a013fe4f958b0cb9bc5239 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1138993613601e128c660c3e7805ad20 = $(`<div id="html_1138993613601e128c660c3e7805ad20" style="width: 100.0%; height: 100.0%;"><div id="jobID-211" onClick="discription(211);">         TRAINEE SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_9713da5333a013fe4f958b0cb9bc5239.setContent(html_1138993613601e128c660c3e7805ad20);
+            
+        
+
+        marker_5f75be4159f809101863f4f8a0f3b99b.bindPopup(popup_9713da5333a013fe4f958b0cb9bc5239)
+        ;
+
+        
+    
+    
+            var marker_4cecf4eef1d09bdc92d5f13e76516674 = L.marker(
+                [31.54659050420355, 74.32229727188592],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_32eca9ae0654406f5d770d41adb65815 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4cecf4eef1d09bdc92d5f13e76516674.setIcon(icon_32eca9ae0654406f5d770d41adb65815);
+        
+    
+        var popup_a3b9b8de48f2c7a7382bbb0b02a6810e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bece32183299a95f19bb1afce83dc030 = $(`<div id="html_bece32183299a95f19bb1afce83dc030" style="width: 100.0%; height: 100.0%;"><div id="jobID-212" onClick="discription(212);">         TRAINEE SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_a3b9b8de48f2c7a7382bbb0b02a6810e.setContent(html_bece32183299a95f19bb1afce83dc030);
+            
+        
+
+        marker_4cecf4eef1d09bdc92d5f13e76516674.bindPopup(popup_a3b9b8de48f2c7a7382bbb0b02a6810e)
+        ;
+
+        
+    
+    
+            var marker_b21149b0d96925383fda9d64b1a3d0dd = L.marker(
+                [24.95558534729101, 67.06540449612996],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_2ef252dab6daf890ecb457093b85742a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b21149b0d96925383fda9d64b1a3d0dd.setIcon(icon_2ef252dab6daf890ecb457093b85742a);
+        
+    
+        var popup_cdbc23151635a5810e98f652b0a1c849 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_075a2d36093d1265cf5b74c72e5c9b7e = $(`<div id="html_075a2d36093d1265cf5b74c72e5c9b7e" style="width: 100.0%; height: 100.0%;"><div id="jobID-213" onClick="discription(213);">         TRAINEE SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_cdbc23151635a5810e98f652b0a1c849.setContent(html_075a2d36093d1265cf5b74c72e5c9b7e);
+            
+        
+
+        marker_b21149b0d96925383fda9d64b1a3d0dd.bindPopup(popup_cdbc23151635a5810e98f652b0a1c849)
+        ;
+
+        
+    
+    
+            var marker_a9c3f4f3710763245d5db918e8d9d26b = L.marker(
+                [31.551194186607432, 74.32338623502744],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_287722ff032c1075f600e7e20142de02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a9c3f4f3710763245d5db918e8d9d26b.setIcon(icon_287722ff032c1075f600e7e20142de02);
+        
+    
+        var popup_9ffa0244cd0d4daacf41e76ba1875ce0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc0a953fcb606e4beac7766602f03875 = $(`<div id="html_dc0a953fcb606e4beac7766602f03875" style="width: 100.0%; height: 100.0%;"><div id="jobID-214" onClick="discription(214);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_9ffa0244cd0d4daacf41e76ba1875ce0.setContent(html_dc0a953fcb606e4beac7766602f03875);
+            
+        
+
+        marker_a9c3f4f3710763245d5db918e8d9d26b.bindPopup(popup_9ffa0244cd0d4daacf41e76ba1875ce0)
+        ;
+
+        
+    
+    
+            var marker_083377a11bed4b9459fc17ea7ba42539 = L.marker(
+                [24.9550148229226, 67.06511067676588],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_30bb7c8993e37d116259d2c98a6ba1c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_083377a11bed4b9459fc17ea7ba42539.setIcon(icon_30bb7c8993e37d116259d2c98a6ba1c7);
+        
+    
+        var popup_f012b9c5a7e0ab24e5b37069c5edda60 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ee4ea05b49058076417416b36849dd5 = $(`<div id="html_7ee4ea05b49058076417416b36849dd5" style="width: 100.0%; height: 100.0%;"><div id="jobID-215" onClick="discription(215);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_f012b9c5a7e0ab24e5b37069c5edda60.setContent(html_7ee4ea05b49058076417416b36849dd5);
+            
+        
+
+        marker_083377a11bed4b9459fc17ea7ba42539.bindPopup(popup_f012b9c5a7e0ab24e5b37069c5edda60)
+        ;
+
+        
+    
+    
+            var marker_f97c7ad0879fe8ef8a5336e5f0881a50 = L.marker(
+                [24.964085998364276, 67.0611599618679],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_87480062e83f7b4aae8ab88bb3df7044 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f97c7ad0879fe8ef8a5336e5f0881a50.setIcon(icon_87480062e83f7b4aae8ab88bb3df7044);
+        
+    
+        var popup_b4b14e6f6f2db48e6385b4f99902f04d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9d4b4c7463fbeca4090ffb4f582b3e6 = $(`<div id="html_d9d4b4c7463fbeca4090ffb4f582b3e6" style="width: 100.0%; height: 100.0%;"><div id="jobID-216" onClick="discription(216);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_b4b14e6f6f2db48e6385b4f99902f04d.setContent(html_d9d4b4c7463fbeca4090ffb4f582b3e6);
+            
+        
+
+        marker_f97c7ad0879fe8ef8a5336e5f0881a50.bindPopup(popup_b4b14e6f6f2db48e6385b4f99902f04d)
+        ;
+
+        
+    
+    
+            var marker_7316c447ec0f8fed2cfb97a8739e6517 = L.marker(
+                [33.719102937470915, 73.09979419722404],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_6cda00978e5c6d1495b88be141b8a7d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7316c447ec0f8fed2cfb97a8739e6517.setIcon(icon_6cda00978e5c6d1495b88be141b8a7d6);
+        
+    
+        var popup_7622a2b51407f7fdcc9ba8c5c1173179 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1282edd4fe6d637bc1afba5f3baec26d = $(`<div id="html_1282edd4fe6d637bc1afba5f3baec26d" style="width: 100.0%; height: 100.0%;"><div id="jobID-217" onClick="discription(217);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_7622a2b51407f7fdcc9ba8c5c1173179.setContent(html_1282edd4fe6d637bc1afba5f3baec26d);
+            
+        
+
+        marker_7316c447ec0f8fed2cfb97a8739e6517.bindPopup(popup_7622a2b51407f7fdcc9ba8c5c1173179)
+        ;
+
+        
+    
+    
+            var marker_839affb647853e8d15585abb5bf207b5 = L.marker(
+                [24.96438947575244, 67.06394608271876],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_c491050c916e6f29c1f9e6fb06afd008 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_839affb647853e8d15585abb5bf207b5.setIcon(icon_c491050c916e6f29c1f9e6fb06afd008);
+        
+    
+        var popup_0203087edda90ae282d086a8e7de14c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc9d79f93a7bec0de62bca5ef5e1b93d = $(`<div id="html_bc9d79f93a7bec0de62bca5ef5e1b93d" style="width: 100.0%; height: 100.0%;"><div id="jobID-218" onClick="discription(218);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_0203087edda90ae282d086a8e7de14c8.setContent(html_bc9d79f93a7bec0de62bca5ef5e1b93d);
+            
+        
+
+        marker_839affb647853e8d15585abb5bf207b5.bindPopup(popup_0203087edda90ae282d086a8e7de14c8)
+        ;
+
+        
+    
+    
+            var marker_1c2d7e7924fad09919d144aed9c167ed = L.marker(
+                [33.72565566405687, 73.10165711470896],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_5c597c9d2548f7507854ec62c23fcecf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1c2d7e7924fad09919d144aed9c167ed.setIcon(icon_5c597c9d2548f7507854ec62c23fcecf);
+        
+    
+        var popup_9757a2b12debe3f429ac5ae691eb06f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d469d6aea8714af3c5d125eb809f1f04 = $(`<div id="html_d469d6aea8714af3c5d125eb809f1f04" style="width: 100.0%; height: 100.0%;"><div id="jobID-219" onClick="discription(219);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_9757a2b12debe3f429ac5ae691eb06f3.setContent(html_d469d6aea8714af3c5d125eb809f1f04);
+            
+        
+
+        marker_1c2d7e7924fad09919d144aed9c167ed.bindPopup(popup_9757a2b12debe3f429ac5ae691eb06f3)
+        ;
+
+        
+    
+    
+            var marker_b4e65933e1f8e53ab6d8321e18bdc3f6 = L.marker(
+                [24.96969209597813, 67.06282808691022],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_6cf7bd81b3274ed0a409f14684c31032 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b4e65933e1f8e53ab6d8321e18bdc3f6.setIcon(icon_6cf7bd81b3274ed0a409f14684c31032);
+        
+    
+        var popup_28afa290150d113f22f905d15ec81779 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_adf0ca3bc05565ec08b1383f51f896d6 = $(`<div id="html_adf0ca3bc05565ec08b1383f51f896d6" style="width: 100.0%; height: 100.0%;"><div id="jobID-220" onClick="discription(220);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_28afa290150d113f22f905d15ec81779.setContent(html_adf0ca3bc05565ec08b1383f51f896d6);
+            
+        
+
+        marker_b4e65933e1f8e53ab6d8321e18bdc3f6.bindPopup(popup_28afa290150d113f22f905d15ec81779)
+        ;
+
+        
+    
+    
+            var marker_0ae4675017aac1281048e8080397fe1c = L.marker(
+                [33.73018228395026, 73.10707476973755],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_57aad5d3d871822f22a04ca3e25eed6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0ae4675017aac1281048e8080397fe1c.setIcon(icon_57aad5d3d871822f22a04ca3e25eed6a);
+        
+    
+        var popup_a41a160e419716acced11bccd261d3e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c43a68e90f96c235dd3f1ceea3c967c = $(`<div id="html_0c43a68e90f96c235dd3f1ceea3c967c" style="width: 100.0%; height: 100.0%;"><div id="jobID-221" onClick="discription(221);">         SOFTWARE DEVELOPER click for more details         </div></div>`)[0];
+                popup_a41a160e419716acced11bccd261d3e8.setContent(html_0c43a68e90f96c235dd3f1ceea3c967c);
+            
+        
+
+        marker_0ae4675017aac1281048e8080397fe1c.bindPopup(popup_a41a160e419716acced11bccd261d3e8)
+        ;
+
+        
+    
+    
+            var marker_bd30be156f7d3bf7333133ce73b268ab = L.marker(
+                [31.557202793392047, 74.33548957984267],
+                {}
+            ).addTo(marker_cluster_50a7e083c64f8b4ffa3b01fdbd986b6d);
+        
+    
+            var icon_0853518b03fbc6a57bff018e90938a8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bd30be156f7d3bf7333133ce73b268ab.setIcon(icon_0853518b03fbc6a57bff018e90938a8a);
+        
+    
+        var popup_895af969d2c3c4da8c93d587115fa664 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_93186434bb0ca7ac0716a250ea07775c = $(`<div id="html_93186434bb0ca7ac0716a250ea07775c" style="width: 100.0%; height: 100.0%;"><div id="jobID-222" onClick="discription(222);">         FULL STACK DEVELOPER click for more details         </div></div>`)[0];
+                popup_895af969d2c3c4da8c93d587115fa664.setContent(html_93186434bb0ca7ac0716a250ea07775c);
+            
+        
+
+        marker_bd30be156f7d3bf7333133ce73b268ab.bindPopup(popup_895af969d2c3c4da8c93d587115fa664)
+        ;
+
+        
+    
+</script>
+</html>
