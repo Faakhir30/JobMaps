@@ -61,6 +61,6 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 ## Contact
 
-If you have any questions or inquiries regarding the IT Jobs Map website, please contact us at [email protected]
+If you have any questions or inquiries regarding the IT Jobs Map website, please contact us at fzahid.bscs22seecs@seecs.edu.pk
 
 We appreciate your interest and hope that this website helps you in finding IT job opportunities in Pakistan. Happy job hunting!
