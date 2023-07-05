@@ -54,10 +54,10 @@ function discription(id){
 })
 .then(response => response.json())
 .then(result => {
-  document.getElementById('title').innerHTML=result.title;
-  document.getElementById('company').innerHTML="At: "+result.company;
+  document.getElementById('title').innerHTML=`<a href=${result.companyLN}>${result.title +" @ "+result.company}</a>`;
+  document.getElementById('company').innerHTML='';
   document.getElementById('location').style.display=`block`;
-  document.getElementById('location').innerHTML=`<a href=${result.companyLN}>${result.location}</a>`;
+  document.getElementById('location').innerHTML=result.location;
   document.getElementById('discription').innerHTML="DISCRIPTION: \n"+ `${result.discription} `;
   if (result.link!=='')
     lin=result.link;

@@ -15,7 +15,6 @@ def figuresAPI(request):
 @csrf_exempt
 def discriptionAPI(request, id):
     if request.method=='POST':
-        print(id, Job.objects.first())
         job=Job.objects.get(id=id)
         print(job)
         return JsonResponse({

@@ -5,10 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Consolas&display=swap" rel="stylesheet">
     <link rel="icon" style="border-radius:50%;clip:50% 50% 50% 50%;" type="image/x-icon" href="{% static 'JobMap/favicon.jpg' %}">
     <title>Welcome to JobMaps!</title>
     <script defer src="{% static 'JobMap/script.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'JobMap/a.css' %}">
+    <link defer rel="stylesheet" href="{% static 'JobMap/a.css' %}">
   </head>
   <body>
     <div class="loading-screen">
@@ -46,11 +47,11 @@
           </ul>
         </div>
           <hr>
-          <div style="color:lightgrey;" id="title"></div>
-          <div id="company" style="color:lightgrey;"></div>
-          <div id="location" style="color:lightgrey;"></div><hr>
-          <div id="discription" style="color:lightgrey;"></div><hr>
-          <div id="linkedIN" style="color:lightgrey;"></div>
+          <div style="color:white;" id="title"></div>
+          <div id="company" style="color:white;"></div>
+          <div id="location" style="color:white;"></div><hr>
+          <div id="discription" style="color:white;"></div><hr>
+          <div id="linkedIN" style="color:white;"></div>
 
         </div>
         <div class="map">{% include 'JobMap/map.html' %}</div>  

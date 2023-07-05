@@ -54,7 +54,7 @@ def plotMap():
         {coord[0].upper()}\nclick for more details
         </div>'''
 
-        folium.Marker(location=coord[1],popup=marker_html,icon=folium.Icon(icon='briefcase', color='red')).add_to(marker_cluster)
+        folium.Marker(location=coord[1],popup=marker_html,icon=folium.Icon(icon='briefcase', color='yellow')).add_to(marker_cluster)
     map.save("jobmap/templates/JobMap/map.html")
     HttpResponseRedirect(reverse('index'))
     return JsonResponse({'status':'sucess'},status=201)

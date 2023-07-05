@@ -1,7 +1,7 @@
 :root { 
-  font-size: 16px;
-  font-family: 'Open Sans';
-  color: #ffffff  ;
+  font-size: large;
+  font-family: consolas, monospace !important;
+  color: #ffffff;
   --bg-six:#3a3939;
   --bg-one: #ffffff;
   --bg-three: rgb(255 252 252);
@@ -9,6 +9,10 @@
 }
 *{
   list-style-type: none;
+}
+a{
+  text-decoration: none !important;
+  color: gold !important;
 }
 .mainFlex{
   display: flex;
@@ -18,9 +22,9 @@
 .Navbar{
   width: 30%;
   margin-bottom: 0;
-  border-radius: 0 15px 15px 0;
+  /* border-radius: 0 15px 15px 0; */
   background-color:var(--bg-six);
-  box-shadow: 7px 0px 20px 20px, inset 0px 0px 10px 0px gold;
+  /* box-shadow: 7px 0px 20px 20px, inset 0px 0px 10px 0px gold; */
   display: flex;
   flex-direction: column;        
   padding-left: 0%;
@@ -37,7 +41,6 @@
   margin-top: 1rem;
   text-align: center;
   color: gold;
-  text-emphasis-color: red;
   font-size: 2rem;
   letter-spacing: 0.3ch;
   width: 100%;
@@ -81,7 +84,6 @@ border: 6px solid gold;
 border-radius: 50%;
 justify-items: center;
 align-content: center;
-font-family: Lobster;
 font-size: xx-large;
 font-stretch: ultra-expanded;
 padding: inherit;
@@ -113,8 +115,10 @@ color: var(--bg-three);
 align-self: center;
 }
 #discription{
+  color: #ffffff;
+  height: 39vh;
   overflow: auto;
-  margin-right: 5%;
+  margin: 0 1vw 0 2vw;
 }
 #discription::-webkit-scrollbar {
   width: 5px; /* set the width of the scrollbar */
@@ -131,7 +135,7 @@ align-self: center;
 }
 #applyBtn{
   padding: 30%;
-  color: white;
+  color: white !important;
   background-color: gold;
   border-radius: 10%;
   box-shadow: 0px 0px 17px 3px goldenrod;
@@ -224,8 +228,8 @@ align-self: center;
 
 p {
   margin-top: 10px;
-  font-size: 16px;
-  color: #d1d1d1;
+  font-size: large;
+  color: #fff;
   font-weight: bold;
   text-align: center;
 }
