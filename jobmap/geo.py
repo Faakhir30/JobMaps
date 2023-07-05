@@ -7,6 +7,16 @@ import folium,requests
 from .models import Job,LastRefreash
 from datetime import datetime, timedelta
 def getLoc(address):    
+    """
+    Get longitude and latitude coordinates for a given address using a geocoding API.
+
+    Args:
+        address (str): The address to geocode.
+
+    Returns:
+        tuple: A tuple containing the longitude and latitude coordinates.
+               If the coordinates cannot be obtained, returns (None, None).
+    """
     try:
         addres=address.replace(' ','+')
         
@@ -23,6 +33,12 @@ def getLoc(address):
             return None,None
 
 def plotMap():
+    """
+    Plot the job locations on a map and save it as HTML.
+
+    Returns:
+        JsonResponse: A JSON response indicating the status of the operation.
+    """
     map = folium.Map(min_zoom=4, max_zoom=19,location=[ 32.871172,70.954883], zoom_start = 5.3,tiles='Cartodbdark_matter',
             attr='My Data Attribution')
     print("plotingg")
@@ -47,10 +63,20 @@ def plotMap():
     return JsonResponse({'status':'sucess'},status=201)
 
 def scrapeJobs(request):
+    
+    """
+    Scrape job listings from a website and save them to the database.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        JsonResponse: A JSON response indicating the status of the operation.
+    """
     if LastRefreash.objects.count()==0:
         LastRefreash.objects.create(date='starting')
         
-    if LastRefreash.objects.last().date not in [(datetime.today().date()-timedelta(days=i)).strftime("%Y-%m-%d") for i in range(7)]:
+    if LastRefreash.objects.last().date not in [(datetime.today().date()-timedelta(days=i)).strftime("%Y-%m-%d") for i in range(34)]:
         LastRefreash.objects.all().delete()
         Job.objects.all().order_by('-id').delete()
         LastRefreash.objects.create(date=str(datetime.today().date()))
@@ -85,6 +111,9 @@ def scrapeJobs(request):
     else:
         return JsonResponse({'status':'sucess'},status=201)
 def main():
+    """
+    Main entry point of the script.
+    """
     scrapeJobs('')
 if __name__=='__main__':
     main()
