@@ -1,7 +1,6 @@
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import JsonResponse
 from django.shortcuts import render
-from django.urls import reverse
-from .models import LastRefreash,Job
+from .models import Job
 from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def index(request):
@@ -16,6 +15,7 @@ def figuresAPI(request):
 @csrf_exempt
 def discriptionAPI(request, id):
     if request.method=='POST':
+        print(id, Job.objects.first())
         job=Job.objects.get(id=id)
         print(job)
         return JsonResponse({

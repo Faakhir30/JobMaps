@@ -20,11 +20,9 @@ def getLoc(address):
     try:
         addres=address.replace(' ','+')
         
-        print("req loc of ", addres)
         response = requests.get(f"https://geocode.search.hereapi.com/v1/geocode?q={addres}&apiKey=rllzMKVvoddnP-NF_-BOhPf97Xi7iIU_Wd15Ge7Y-CI")
         
         if response.status_code == 200 and response.json():
-            print("loc found")
             location = response.json()['items'][0]['position']
             return location['lng'], location['lat']
         else:
@@ -46,17 +44,16 @@ def plotMap():
     for job in list(Job.objects.all()):
         long,lat=getLoc(job.location)
         if (long or lat):
-            print("add marker")
             coordinates.append([job.title, [lat,long],job.id])
     offset = 0.001
     coordinates = [[coord[0],[coord[1][0]+offset*i-random.random()/100, coord[1][1]+offset*i+random.random()/100],coord[2]] for i, coord in enumerate(coordinates)]
-    print(coordinates)
     marker_cluster = MarkerCluster().add_to(map)
-
+    print("almost done")
     for coord in coordinates:
-        marker_html = f'''<div id="jobID-{coord[2]}" onClick="discription({coord[2]});">
+        marker_html = f'''<div id="jobID-{coord[2]}" style="font-weight: bold;cursor: pointer;" onClick="discription({coord[2]});">
         {coord[0].upper()}\nclick for more details
         </div>'''
+
         folium.Marker(location=coord[1],popup=marker_html,icon=folium.Icon(icon='briefcase', color='red')).add_to(marker_cluster)
     map.save("jobmap/templates/JobMap/map.html")
     HttpResponseRedirect(reverse('index'))
@@ -80,7 +77,6 @@ def scrapeJobs(request):
         LastRefreash.objects.all().delete()
         Job.objects.all().order_by('-id').delete()
         LastRefreash.objects.create(date=str(datetime.today().date()))
-        print('started')
         html_txt=requests.get("https://pk.linkedin.com/jobs/search?keywords=Software%20Development&location=Pakistan&locationId=&geoId=101022442&f_TPR=r604800&position=1&pageNum=0").text
         Mainsoup=BeautifulSoup(html_txt,'lxml')
         jobs=Mainsoup.find_all("div",class_="base-card relative w-full hover:no-underline focus:no-underline base-card--link base-search-card base-search-card--link job-search-card")
@@ -92,9 +88,10 @@ def scrapeJobs(request):
             except:
                 apply_ln=job.a.get('href')
             try:
-                discription=BeautifulSoup(requests.get(job.a.get('href')).text,'lxml').find('div',class_="show-more-less-html__markup show-more-less-html__markup--clamp-after-5").text.replace('\n','<br>')
+                print("writing")
+                discription=BeautifulSoup(requests.get(job.a.get('href')).text,'lxml').find('div',class_="show-more-less-html__markup show-more-less-html__markup--clamp-after-5 relative overflow-hidden").text.replace('\n','<br>')
             except:
-                discription=""
+                discription="Click the below link"
             for punc in ['(','\'',')','.']:
                 if punc in discription:
                     discription.replace(punc,'<br>')
@@ -106,6 +103,7 @@ def scrapeJobs(request):
             company_linkedIn=job.find('div',class_='base-search-card__info').a.get('href')
             )
             if a not in Job.objects.all():
+                print("saving")
                 a.save()
         return plotMap()
     else:
